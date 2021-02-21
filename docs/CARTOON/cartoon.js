@@ -1,5 +1,16 @@
-var canvas = document.getElementById("myCanvas");
+/* 
+ * DONGRYUL KIM
+ * CISC 3610
+ * 1st assignemt - Cartoon
+ * fillStyle = Color
+ * fillRect = filling range
+ * font = text font
+ * var line, height = position of font
+ * fillText = text
+ */
 
+var canvas = document.getElementById("myCanvas");
+ 
 //Background
 function background() {
 	var background = canvas.getContext("2d");
@@ -27,6 +38,7 @@ function ground() {
 //Mountain
 function mountain() {
 	var mountain = canvas.getContext("2d");
+		//draw mountain using moveTo/ lineTo
 		mountain.beginPath();
 		mountain.moveTo(0, 300);
 		mountain.lineTo(100,200);
@@ -38,6 +50,7 @@ function mountain() {
 		mountain.lineTo(500,450);
 		mountain.lineTo(0,450);
 		mountain.closePath();
+		//width of line
 		mountain.lineWidth = 2;
 		mountain.strokeStyle = "#5af533";
 		mountain.stroke();
@@ -53,6 +66,7 @@ function mountain() {
 //sun
 function sun() {
 	var sun = canvas.getContext("2d");
+		//create a circle to draw the sun
 		sun.beginPath();
 		sun.arc(430,70, 50, 50, 100*Math.PI, false);
 		sun.closePath();
@@ -71,6 +85,8 @@ function sun() {
 function fence() {
 	var fence = canvas.getContext("2d");
 		var step;
+		//using for loop to draw fence from left to right
+		//each fence has 40 length, so variable will be added 40 in every loop
 		for (step = 0; step <=canvas.width; step +=40) {
 			fence.beginPath();
 			fence.moveTo(step, 452);
@@ -91,6 +107,7 @@ function fence() {
 //house
 function house() {
 	var house = canvas.getContext("2d");
+		//draw a house
 		house.beginPath();
 		house.moveTo(75, 450);
 		house.lineTo(75, 350);
@@ -115,6 +132,7 @@ function house() {
 //glass
 function glass() {
 	var glass = canvas.getContext("2d");
+		//draw a window on house's wall
 		glass.beginPath();
 		glass.moveTo(100, 410);
 		glass.lineTo(100, 360);
@@ -138,6 +156,7 @@ function glass() {
 function grass() {
 	var grass = canvas.getContext("2d");
 		var step;
+		//draw grass on the ground. using for loop to draw grass on canvas
 		for (step = 0; step <=canvas.width; step +=20) {
 			grass.beginPath();
 			grass.moveTo(step,452);
@@ -156,6 +175,7 @@ var car = canvas.getContext("2d");
 	var x = -50;
 	var y = 450;
 	var dx = 2;
+	//draw moving car
 	function drawCar() {
    		car.beginPath();
     		car.arc(x, y, 5, 0, Math.PI*2);
@@ -175,6 +195,7 @@ var car = canvas.getContext("2d");
     		car.fill();
 	}
 	function draw() {
+		//clear canvas and keep recalling background elements 
     		car.clearRect(0, 0, canvas.width, canvas.height);
     		background();
 		ground();
@@ -185,10 +206,11 @@ var car = canvas.getContext("2d");
 		glass();
 		grass();
     		drawCar();
-		
+		//when car finished to move from left to right, reset car position to left
     		if(x >= 530){
     			x = -50;
     		}
+		//else car move
     		else {
     			x += dx;
     		}

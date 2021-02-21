@@ -1,3 +1,9 @@
+/* 
+ * DONGRYUL KIM
+ * CISC 3610
+ * 1st assignemt - Cartoon
+ */
+
 var canvas = document.getElementById("myCanvas");
 
 //Background
