@@ -2,7 +2,6 @@ var canvas = document.getElementById("myCanvas");
 
 //Background
 function background() {
-
 	var background = canvas.getContext("2d");
 		background.fillStyle = "#6cdef5";
 		background.fillRect(0, 0, 500, 500);
