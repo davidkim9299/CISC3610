@@ -36,7 +36,7 @@ function findchartfit(){
 var fitnum = findchartfit();
 
 for(var f = 0; f < canvas.height/100; f++) {
-	drawchart(f*100, 600, 100, (fruits.quantity[f])*fitnum, fruits.color[f]);
+	drawchart(f*100, 500, 100, (fruits.quantity[f])*fitnum, fruits.color[f]);
 	filltext(fruits.quantity[f],'bold 20px arial','black',((f*100) + 50),550);
 	filltext(fruits.name[f],'bold 18px arial','black',(f*100)+50,575);
 }
