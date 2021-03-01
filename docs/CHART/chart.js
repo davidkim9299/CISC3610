@@ -1,6 +1,12 @@
 const canvas = document.getElementById('canvas_chart');
 const chart = canvas.getContext('2d');
 
+//Array of Fruits
+var fruits = {
+	"name":["Apple","Orange", "Banana", "Kiwi", "Blueberry", "Grapes"],
+	"quantity":[20,10,15,3,5,8],
+	"color":['red','orange','yellow','green','skyblue','purple']
+};
 
 function drawchart(x, y, length, width, color){
 	chart.fillStyle = color;
@@ -16,13 +22,6 @@ function filltext(text, font, color, x, y){
   	chart.fillText(text, x, y);
   
 } 
-
-//Array of Fruits
-var fruits = {
-	"name":["Apple","Orange", "Banana", "Kiwi", "Blueberry", "Grapes"],
-	"quantity":[20,10,15,3,5,8],
-	"color":['red','orange','yellow','green','skyblue','purple']
-};
 
 function findchartfit(){
 	var fit = 0;
