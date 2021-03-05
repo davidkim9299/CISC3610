@@ -10,7 +10,7 @@ var canvas = document.getElementById("myCanvas");
 var background = canvas.getContext("2d");
 	//background color and position
 	background.fillStyle = "cyan";
-	background.fillRect(0, 0, 250, 280);
+	background.fillRect(0, 0, canvas.width, canvas.height);
 
 	//insert text in backgroud
 	background.font = "20px Arial";
