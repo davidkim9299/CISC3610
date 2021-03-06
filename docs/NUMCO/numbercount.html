@@ -9,13 +9,20 @@
 <center>
 <h3>Lab 2, Number Counting</h3>
 <canvas id="myCanvas" width="250" height="280"></canvas>
+<script>
+	var canvasBGcolor = document.getElementById("myCanvas").getContext("2d");
+	canvasBGcolor.fillStyle="cyan";
+	canvasBGcolor.fillRect(0,0,250,280);
+</script>
 <script src="number.js"></script>
 <script src="animation.js"></script>
-<a href="../index.html"><h3>HOME</h3></a>
-	<button type="button" class="navyBtn" onClick="location.href='numbercount.html'">START</button>
+	<br>
+	<button id="button">START</button>
+	<a href="../index.html"><h3>HOME</h3></a>
+	<a href="numbercount.html"><h3>START</h3></a>
 	<a href="http://www.dongryulkim9299.com"><h3>PORTFOLIO</h3></a>
 	<a href="https://github.com/davidkim9299/CISC3610/tree/main/docs/NUMCO"><h3>GitHub</h3></a>
-
+	
 </center>
 </body>
 </html>

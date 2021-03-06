@@ -6,6 +6,15 @@ var Scene = {
 	sprite: undefined
 };
 
+
+
+document.addEventListener('DOMContentLoaded',()=> {
+	let btn = document.getElementById("button");
+	btn.addEventListener('click',Scene.mainLoop);
+	}
+);
+
+
 Scene.start = function () {
 	// Get the canvas and it's context.
     	Scene.canvas = document.getElementById("myCanvas");
@@ -21,7 +30,6 @@ Scene.start = function () {
 	// Wait till the parrot image is loaded before starting the animation.
 	Scene.sprite.img.onload = function() {		
 	Scene.sprite.offset=-Scene.sprite.frames[Scene.sprite.frame].frame.w;
-    	Scene.mainLoop();
 	}
 };
 
