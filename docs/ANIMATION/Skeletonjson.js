@@ -6,6 +6,7 @@ Skeleton={
 	scale: 0.5,
 	"frames": [
 		{
+			"filename": "tile000.png",
 			"frame": {
 				"x": 17,
 				"y": 19,
@@ -20,6 +21,7 @@ Skeleton={
 
 
 		{
+			"filename": "tile001.png",
 			"frame": {
 				"x": 188,
 				"y": 28,
@@ -34,6 +36,7 @@ Skeleton={
 
 
 		{
+			"filename": "tile002.png",
 			"frame": {
 				"x": 346,
 				"y": 24,
@@ -48,6 +51,7 @@ Skeleton={
 
 
 		{
+			"filename": "tile003.png",
 			"frame": {
 				"x": 489,
 				"y": 16,
@@ -61,7 +65,8 @@ Skeleton={
 		},
 
 
-		{
+		{	
+			"filename": "tile004.png",
 			"frame": {
 				"x": 631,
 				"y": 9,
@@ -76,6 +81,7 @@ Skeleton={
 
 
 		{
+			"filename": "tile005.png",
 			"frame": {
 				"x": 774,
 				"y": 5,
@@ -92,6 +98,7 @@ Skeleton={
 
 
 		{
+			"filename": "tile006.png",
 			"frame": {
 				"x": 917,
 				"y": 5,
@@ -106,6 +113,7 @@ Skeleton={
 
 
 		{
+			"filename": "tile007.png",
 			"frame": {
 				"x": 1063,
 				"y": 11,
@@ -120,6 +128,7 @@ Skeleton={
 
 
 		{
+			"filename": "tile008.png",
 			"frame": {
 				"x": 1217,
 				"y": 23,
@@ -134,6 +143,7 @@ Skeleton={
 
 
 		{
+			"filename": "tile009.png",
 			"frame": {
 				"x": 1375,
 				"y": 28,
@@ -148,6 +158,7 @@ Skeleton={
 
 
 		{
+			"filename": "tile010.png",
 			"frame": {
 				"x": 1526,
 				"y": 17,
@@ -162,6 +173,7 @@ Skeleton={
 
 
 		{
+			"filename": "tile011.png",
 			"frame": {
 				"x": 1677,
 				"y": 8,
@@ -176,6 +188,7 @@ Skeleton={
 
 
 		{
+			"filename": "tile012.png",
 			"frame": {
 				"x": 1833,
 				"y": 19,
@@ -190,6 +203,7 @@ Skeleton={
 
 
 		{
+			"filename": "tile013.png",
 			"frame": {
 				"x": 2000,
 				"y": 32,
@@ -204,6 +218,7 @@ Skeleton={
 
 
 		{
+			"filename": "tile014.png",
 			"frame": {
 				"x": 2157,
 				"y": 29,
@@ -218,6 +233,7 @@ Skeleton={
 
 
 		{
+			"filename": "tile015.png",
 			"frame": {
 				"x": 2300,
 				"y": 17,
@@ -232,6 +248,7 @@ Skeleton={
 
 
 		{
+			"filename": "tile016.png",
 			"frame": {
 				"x": 2443,
 				"y": 9,
@@ -246,6 +263,7 @@ Skeleton={
 
 
 		{
+			"filename": "tile017.png",
 			"frame": {
 				"x": 2587,
 				"y": 6,
@@ -260,6 +278,7 @@ Skeleton={
 
 
 		{
+			"filename": "tile018.png",
 			"frame": {
 				"x": 2729,
 				"y": 6,
@@ -274,6 +293,7 @@ Skeleton={
 
 
 		{
+			"filename": "tile019.png",
 			"frame": {
 				"x": 2875,
 				"y": 11,
@@ -288,6 +308,7 @@ Skeleton={
 
 
 		{
+			"filename": "tile020.png",
 			"frame": {
 				"x": 3029,
 				"y": 23,
@@ -302,6 +323,7 @@ Skeleton={
 
 
 		{
+			"filename": "tile021.png",
 			"frame": {
 				"x": 3187,
 				"y": 28,
@@ -316,6 +338,7 @@ Skeleton={
 
 
 		{
+			"filename": "tile022.png",
 			"frame": {
 				"x": 3342,
 				"y": 17,
@@ -330,6 +353,7 @@ Skeleton={
 
 
 		{
+			"filename": "tile023.png",
 			"frame": {
 				"x": 3489,
 				"y": 5,
