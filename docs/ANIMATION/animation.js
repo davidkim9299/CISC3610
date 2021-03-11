@@ -11,14 +11,14 @@ Scene.start = function () {
 	Scene.canvas = document.getElementById("myCanvas");
 	Scene.canvasContext = Scene.canvas.getContext("2d");
 	
-	// Seup the parrot to be displayed.
+	// Seup the skeleton to be displayed.
 	Scene.sprite = Skeleton;
 	
 	// Attach the image to be used for the sprite.
 	Scene.sprite.img = new Image();
 	Scene.sprite.img.src = Scene.sprite.src;
 	
-	// Wait till the parrot image is loaded before starting the animation.
+	// Wait till the skeleton image is loaded before starting the animation.
 	Scene.sprite.img.onload = function() {		
 		Scene.sprite.offset=-Scene.sprite.frames[Scene.sprite.frame].frame.w;
     		Scene.mainLoop();
