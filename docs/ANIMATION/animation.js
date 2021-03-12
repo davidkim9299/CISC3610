@@ -13,14 +13,23 @@ Scene.start = function () {
 	
 	// Seup the skeleton to be displayed.
 	Scene.sprite = Skeleton;
+	Scene.textb = Balloon;
 	
 	// Attach the image to be used for the sprite.
 	Scene.sprite.img = new Image();
 	Scene.sprite.img.src = Scene.sprite.src;
 	
+	Scene.textb.img = new Image();
+	Scene.textb.img.src = Scene.textb.src;
+	
 	// Wait till the skeleton image is loaded before starting the animation.
 	Scene.sprite.img.onload = function() {		
 		Scene.sprite.offset=-Scene.sprite.frames[Scene.sprite.frame].frame.w;
+    		Scene.mainLoop();
+	}
+	
+	Scene.textb.img.onload = function() {		
+		Scene.textb.offset=-Scene.textb.frames[Scene.textb.frame].frame.w;
     		Scene.mainLoop();
 	}
 };
@@ -49,9 +58,31 @@ Scene.update = function () {
   	//Scene.canvas.width = window.innerWidth;
 	
 	// Set the location of the next frame. 
-  	Scene.sprite.offset+=6;
+  	Scene.sprite.offset+=3;
+	Scene.textb.offset+=3;
+
 	if(Scene.sprite.offset>Scene.canvas.width)
  		Scene.sprite.offset=-Scene.sprite.frames[Scene.sprite.frame].frame.w;
+	if(Scene.textb.offset>Scene.canvas.width)
+ 		Scene.textb.offset=-Scene.textb.frames[Scene.textb.frame].frame.w;
+};
+
+Scene.drawBalloon = function(i, k) {
+	Scene.canvasContext.drawImage(Scene.textb.img,
+					Scene.textb.frames[i].frame.x,
+					Scene.textb.frames[i].frame.y,
+					Scene.textb.frames[i].frame.w,
+					Scene.textb.frames[i].frame.h,
+					k-60,120,
+					Scene.textb.frames[i].frame.w,
+					Scene.textb.frames[i].frame.h);
+	
+	// Advance to the next frame.
+	Scene.textb.frame++;
+
+	// At the end of the sprite sheet, start at the first frame.
+	if(Scene.textb.frame==Scene.textb.frames.length)
+		Scene.textb.frame=0;
 };
 
 Scene.draw = function () {
@@ -213,6 +244,7 @@ Scene.grass = function() {
 		}
 }
 
+
 Scene.mainLoop = function() {
 	Scene.clearCanvas();
 	Scene.ground();
@@ -224,8 +256,17 @@ Scene.mainLoop = function() {
 	Scene.grass();
 	Scene.update();
 	Scene.draw();
+	if(Scene.sprite.offset > 20 && Scene.sprite.offset < 140) {
+		Scene.drawBalloon(0,Scene.sprite.offset);
+	}
+	else if(Scene.sprite.offset > 200 && Scene.sprite.offset < 340) {
+		Scene.drawBalloon(1,Scene.sprite.offset);
+	}
+	else {
+		Scene.drawBalloon(3,Scene.sprite.offset);
+	}
 	
 	// Animate at 24 frames a second.
-    window.setTimeout(Scene.mainLoop, 2000 /24);
+        window.setTimeout(Scene.mainLoop, 1000 / 10);
 };
 
