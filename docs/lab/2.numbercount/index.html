@@ -40,12 +40,12 @@
 	<!-- MENU DESCRIPTION -->
 	<nav id="topMenu" >
 		<ul>
-			<li><a class="menuLink" href="index.html">
-			<span class="menuLink" style="background-color: #F9E547">HOME</span></a></li>
+			<li><a class="menuLink" href="../../index.html">HOME</a></li>
 			<li>|</li>
-			<li><a class="menuLink" href="lab/index.html">LAB</a></li>
+			<li><a class="menuLink" href="../index.html">
+			<span class="menuLink" style="background-color: #F9E547">LAB</span></a></li>
 			<li>|</li>
-			<li><a class="menuLink" href="assignment/index.html">ASSIGNMENT</a></li>
+			<li><a class="menuLink" href="../../assignment/index.html">ASSIGNMENT</a></li>
 			<li>|</li>
 			<li><a class="menuLink" href="https://dongryulkim9299.com/">PORTFOLIO</a></li>
 			<li>|</li>
@@ -53,16 +53,19 @@
 		</ul>
 	</nav>
     <p></p>
+<h3>Lab, Number Counting</h3>
+<canvas id="myCanvas" width="250" height="280"></canvas>
+<script>
+	var canvasBGcolor = document.getElementById("myCanvas").getContext("2d");
+	canvasBGcolor.fillStyle="cyan";
+	canvasBGcolor.fillRect(0,0,250,280);
+</script>
+<script src="number.js"></script>
+<script src="animation.js"></script><br>
+	<button id="button">START</button>
+	<a href="index.html"><h3>RESET</h3></a>
+	<a href="../index.html"><h3>GO BACK</h3></a>
 	
-	<!-- Contents -->
-	<br><br><br><br>
-	<!-- Picture of Us -->
-		<br><br>	
-		<h1>DONGRYUL KIM</h1>
-		<br><br>
-		<h3>CISC 3610 Repository</h3>
-		<br><br>
-	</center>
-
+</center>
 </body>
 </html>

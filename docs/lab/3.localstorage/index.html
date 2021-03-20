@@ -40,12 +40,12 @@
 	<!-- MENU DESCRIPTION -->
 	<nav id="topMenu" >
 		<ul>
-			<li><a class="menuLink" href="index.html">
-			<span class="menuLink" style="background-color: #F9E547">HOME</span></a></li>
+			<li><a class="menuLink" href="../../index.html">HOME</a></li>
 			<li>|</li>
-			<li><a class="menuLink" href="lab/index.html">LAB</a></li>
+			<li><a class="menuLink" href="../index.html">
+			<span class="menuLink" style="background-color: #F9E547">LAB</span></a></li>
 			<li>|</li>
-			<li><a class="menuLink" href="assignment/index.html">ASSIGNMENT</a></li>
+			<li><a class="menuLink" href="../../assignment/index.html">ASSIGNMENT</a></li>
 			<li>|</li>
 			<li><a class="menuLink" href="https://dongryulkim9299.com/">PORTFOLIO</a></li>
 			<li>|</li>
@@ -53,16 +53,21 @@
 		</ul>
 	</nav>
     <p></p>
-	
-	<!-- Contents -->
-	<br><br><br><br>
-	<!-- Picture of Us -->
-		<br><br>	
-		<h1>DONGRYUL KIM</h1>
-		<br><br>
-		<h3>CISC 3610 Repository</h3>
-		<br><br>
-	</center>
+	<h3>Local Storage</h3>
+	<form action="" method="get">
+		<!--Create an input box (of 40 characters) to allow the user to title their notes-->
+		<input type="text" id="subject" name="subject" min="1" max="40" placeholder="Enter subject"><br><br>
 
+		<!--Create a textarea (10 rows, 80 columns) ) to let the user write some text.-->
+		<textarea id="memo" name="memo" rows="10" cols="80" placeholder="Put your text here"></textarea>
+
+		
+		<p><button id="clearButton" type="button">Clear</button></p>
+
+		<script src="localstorage.js"></script>
+	</form>
+	<a href="index.html"><h3>REFRESH</h3></a>
+	<a href="../index.html"><h3>GO BACK</h3>
+	</center>
 </body>
 </html>
