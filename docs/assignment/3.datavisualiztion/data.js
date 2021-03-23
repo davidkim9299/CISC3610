@@ -1,7 +1,7 @@
 window.onload=function(){
-    var canvas = document.getElementById("graph").getContext("2d");
+    var canvas = document.getElementById("bar").getContext("2d");
     var myChart = new Chart(canvas, {
-        type: 'horizontalBar',
+        type: 'bar',
         data: {
             labels: ["FHA","BROOKLYN","MANHATTAN","BRONX","QUEENS","STATEN ISLAND", "NON DEVELOPMENT FACILITY"],
             datasets: [{
@@ -26,9 +26,9 @@ window.onload=function(){
     });
 
 
-    var canvas = document.getElementById("donut").getContext("2d");
+    var canvas = document.getElementById("Pie").getContext("2d");
     var myChart = new Chart(canvas, {
-        type: 'doughnut',
+        type: 'pie',
         data: {
             labels: ["4 Yr JUNE","5 Yr JUNE","6 Yr","4 Yr AUGUST","5 Yr AUGUST",],
             datasets: [{
