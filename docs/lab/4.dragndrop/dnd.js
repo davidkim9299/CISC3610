@@ -1,8 +1,8 @@
 var config = {
     	type: Phaser.AUTO,
-    	width: 500,
-    	height: 500,
-    	backgroundColor: '#F5F5DC',
+    	width: 800,
+    	height: 800,
+    	backgroundColor: '#6cdef5',
     	parent: 'game',
     	scene: {
         	preload: preload,
@@ -40,8 +40,21 @@ function create(){
     	var eye2 = this.add.sprite(200,100,'eye2').setInteractive();
     	var eye3 = this.add.sprite(300,100,'eye3').setInteractive();
     	var eye4 = this.add.sprite(400,100,'eye4').setInteractive();
-    	var face1 = this.add.sprite(100,300,'face1').setInteractive();
-    	var face2 = this.add.sprite(200,300,'face2').setInteractive();
+	var hairline1 = this.add.sprite(100,200,'hairline1').setInteractive();
+    	var hairline2 = this.add.sprite(200,200,'hairline2').setInteractive();
+	var lear1 = this.add.sprite(100,300,'lear1').setInteractive();
+    	var lear2 = this.add.sprite(200,300,'lear2').setInteractive();
+	var rear1 = this.add.sprite(100,300,'rear1').setInteractive();
+    	var rear2 = this.add.sprite(200,300,'rear2').setInteractive();
+	var mouse1 = this.add.sprite(100,300,'mouse1').setInteractive();
+    	var mouse2 = this.add.sprite(200,300,'mouse2').setInteractive();
+	var mouse3 = this.add.sprite(100,300,'mouse3').setInteractive();
+    	var mouse4 = this.add.sprite(200,300,'mouse4').setInteractive();
+	var nose1 = this.add.sprite(100,300,'nose1').setInteractive();
+    	var nose2 = this.add.sprite(200,300,'nose2').setInteractive();
+	var nose3 = this.add.sprite(100,300,'nose3').setInteractive();
+    	var face1 = this.add.sprite(250,500,'face1').setInteractive();
+    	var face2 = this.add.sprite(550,500,'face2').setInteractive();
 
     	// sprite that you can move around
     	this.input.setDraggable(eye1);
