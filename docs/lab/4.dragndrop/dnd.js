@@ -53,8 +53,8 @@ function create(){
 	var nose1 = this.add.sprite(600,100,'nose1').setInteractive();
     	var nose2 = this.add.sprite(600,200,'nose2').setInteractive();
 	var nose3 = this.add.sprite(600,300,'nose3').setInteractive();
-    	var face1 = this.add.sprite(250,500,'face1').setInteractive();
-    	var face2 = this.add.sprite(550,500,'face2').setInteractive();
+    	var face1 = this.add.sprite(250,600,'face1').setInteractive();
+    	var face2 = this.add.sprite(550,600,'face2').setInteractive();
 
     	// sprite that you can move around
     	this.input.setDraggable(eye1);
