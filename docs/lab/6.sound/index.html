@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<!-- HOME -->
+<head>
+    	<meta charset="utf-8"/>
+    	<title>DONGRYUL KIM</title>
+    	<link rel="stylesheet" href="../../style.css">
+</head>
+<body>
+	<center>
+	<!-- MENU DESCRIPTION -->
+	<nav id="topMenu" >
+		<ul>
+			<li><a class="menuLink" href="../../index.html">HOME</a></li>
+			<li>|</li>
+			<li><a class="menuLink" href="../../lab/index.html">LAB</a></li>
+			<li>|</li>
+			<li><a class="menuLink" href="../index.html">
+			<span class="menuLink" style="background-color: #F9E547">ASSIGNMENT</span></a></li>
+			<li>|</li>
+			<li><a class="menuLink" href="https://dongryulkim9299.com/">PORTFOLIO</a></li>
+			<li>|</li>
+			<li><a class="menuLink" href="https://github.com/davidkim9299">GITHUB</a></li>
+		</ul>
+	</nav>
+    	<p></p>
+	<h3>Lab, Audio Lab</h3>
+	<audio id="lion">
+  		<source src="sounds/lion.ogg" type="audio/ogg">
+  		<source src="sounds/lion.mp3" type="audio/mpeg">
+  		Your browser does not support the audio element.
+	</audio>
+	<audio id="elephant">
+		<source src="sounds/elephant.ogg" type="audio/ogg">
+  		<source src="sounds/elephant.mp3" type="audio/mpeg">
+  		Your browser does not support the audio element.
+	</audio>
+	<audio id="mouse">
+		<source src="sounds/mouse.ogg" type="audio/ogg">
+  		<source src="sounds/mouse.mp3" type="audio/mpeg">
+  		Your browser does not support the audio element.
+	</audio>
+	<audio id="tiger">
+		<source src="sounds/tiger.ogg" type="audio/ogg">
+  		<source src="sounds/tiger.mp3" type="audio/mpeg">
+  		Your browser does not support the audio element.
+	</audio>
+	<audio id="wolf">
+		<source src="sounds/wolf.ogg" type="audio/ogg">
+  		<source src="sounds/wolf.mp3" type="audio/mpeg">
+  		Your browser does not support the audio element.
+	</audio>
+	
+
+	<p>Click the buttons to play or pause the audio.</p>
+
+	<button onclick="playLion()" type="button">Play Lion</button>
+	<button onclick="pauseLion()" type="button">Pause Lion</button>
+	<br><br>
+	<button onclick="playElephant()" type="button">Play Elephant</button>
+	<button onclick="pauseElephant()" type="button">Pause Elephant</button>
+	<br><br>
+	<button onclick="playMouse()" type="button">Play Mouse</button>
+	<button onclick="pauseMouse()" type="button">Pause Mouse</button>
+	<br><br>
+	<button onclick="playTiger()" type="button">Play Tiger</button>
+	<button onclick="pauseTiger()" type="button">Pause Tiger</button>
+	<br><br>
+	<button onclick="playWolf()" type="button">Play Wolf</button>
+	<button onclick="pauseWolf()" type="button">Pause Wolf</button>
+
+	<a href="../index.html"><h3>GO BACK</h3></a>
+	</center>
+	<script>
+		var l = document.getElementById("lion");
+		var e = document.getElementById("elephant");
+		var m = document.getElementById("mouse");
+		var t = document.getElementById("tiger");
+		var w = document.getElementById("wolf");
+
+		function playLion() { 
+  			l.play(); 
+		} 
+		function pauseLion() { 
+  			l.pause(); 
+		}
+
+		function playElephant() { 
+  			e.play(); 
+		} 
+		function pauseElephant() { 
+  			e.pause(); 
+		} 
+
+		function playMouse() { 
+  			m.play(); 
+		} 
+		function pauseMouse() { 
+  			m.pause(); 
+		} 
+
+		function playTiger() { 
+  			t.play(); 
+		} 
+		function pauseTiger() { 
+  			t.pause(); 
+		} 
+
+		function playWolf() { 
+  			w.play(); 
+		} 
+		function pauseWolf() { 
+  			w.pause(); 
+		} 
+	</script>
+	</center>
+</body>
+</html>
