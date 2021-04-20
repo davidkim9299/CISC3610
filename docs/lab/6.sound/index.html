@@ -44,9 +44,9 @@
   		<source src="sounds/tiger.mp3" type="audio/mpeg">
   		Your browser does not support the audio element.
 	</audio>
-	<audio id="wolf">
-		<source src="sounds/wolf.ogg" type="audio/ogg">
-  		<source src="sounds/wolf.mp3" type="audio/mpeg">
+	<audio id="cat">
+		<source src="sounds/cat.ogg" type="audio/ogg">
+  		<source src="sounds/cat.mp3" type="audio/mpeg">
   		Your browser does not support the audio element.
 	</audio>
 	
@@ -65,8 +65,8 @@
 	<button onclick="playTiger()" type="button">Play Tiger</button>
 	<button onclick="pauseTiger()" type="button">Pause Tiger</button>
 	<br><br>
-	<button onclick="playWolf()" type="button">Play Wolf</button>
-	<button onclick="pauseWolf()" type="button">Pause Wolf</button>
+	<button onclick="playCat()" type="button">Play Cat</button>
+	<button onclick="pauseCat()" type="button">Pause Cat</button>
 
 	<a href="../index.html"><h3>GO BACK</h3></a>
 	</center>
@@ -75,7 +75,7 @@
 		var e = document.getElementById("elephant");
 		var m = document.getElementById("mouse");
 		var t = document.getElementById("tiger");
-		var w = document.getElementById("wolf");
+		var c = document.getElementById("cat");
 
 		function playLion() { 
   			l.play(); 
@@ -105,11 +105,11 @@
   			t.pause(); 
 		} 
 
-		function playWolf() { 
-  			w.play(); 
+		function playCat() { 
+  			c.play(); 
 		} 
-		function pauseWolf() { 
-  			w.pause(); 
+		function pauseCat() { 
+  			c.pause(); 
 		} 
 	</script>
 	</center>
