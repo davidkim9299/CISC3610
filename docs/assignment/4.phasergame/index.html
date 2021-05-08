@@ -1,17 +1,36 @@
-<!doctype html>
-<html>
+<!DOCTYPE html>
+<!-- HOME -->
 <head>
-	<meta charset="UTF-8" />
-	<title>DONGRYUL KIM</title>
-	<script src="assets/js/phaser.min.js"></script>
+    	<meta charset="utf-8"/>
+    	<title>DONGRYUL KIM</title>
+    		<script src="phaser.min.js"></script>
+		<link rel="stylesheet" href="../../style.css"
 </head>
 <body>
-<center>
-<script type="text/javascript">
-	var config = {
+  	<center>
+	<nav id="topMenu" >
+		<ul>
+			<li><a class="menuLink" href="../../index.html">HOME</a></li>
+			<li>|</li>
+			<li><a class="menuLink" href="../../lab/index.html">LAB</a></li>
+			<li>|</li>
+			<li><a class="menuLink" href="../../assignment/index.html">
+			<span class="menuLink" style="background-color: #F9E547">ASSIGNMENT</span></a></li>
+			<li>|</li>
+			<li><a class="menuLink" href="https://dongryulkim9299.com/">PORTFOLIO</a></li>
+			<li>|</li>
+			<li><a class="menuLink" href="https://github.com/davidkim9299">GITHUB</a></li>
+		</ul>
+	</nav>
+    	<p></p>
+	<h3>Assignment, Phaser Game</h3>
+	<div id = "game">
+	<script type="text/javascript">
+		var config = {
 		type: Phaser.AUTO,
     		width: 800,
     		height: 600,
+		parent:'game',
 		physics: {
         		default: 'arcade',
         		arcade: {
@@ -29,64 +48,65 @@
 var game = new Phaser.Game(config);
 var score = 0;
 var scoreText;
+var gameoverText;
+var getStar = new Audio('assets/getStar.wav');
+var gameOver = new Audio('assets/gameOver.wav');
+
 
 function preload (){
 	this.load.image('sky', 'assets/sky.png');
 	this.load.image('ground', 'assets/platform.png')
 	this.load.image('ground2', 'assets/platform2.png')
 	this.load.image('dude', 'assets/dude.png')
-  this.load.image('star', 'assets/star.png')
+  	this.load.image('star', 'assets/star.png')
 
 }
 
 function create (){
 	this.add.image(400, 300, 'sky');
-
 	platforms = this.physics.add.staticGroup();
-
-  platforms.create(400, 568, 'ground').setScale(2).refreshBody();
-
+  	platforms.create(400, 568, 'ground').setScale(2).refreshBody();
 	platforms.create(600, 80, 'ground2');
-  platforms.create(300, 150, 'ground2');
-  platforms.create(800, 270, 'ground');
-  platforms.create(-50, 300, 'ground');
+  	platforms.create(300, 150, 'ground2');
+  	platforms.create(800, 270, 'ground');
+  	platforms.create(-50, 300, 'ground');
 	platforms.create(400, 320, 'ground2');
 	platforms.create(200, 420, 'ground2');
 	platforms.create(600, 470, 'ground2');
-
 	player = this.physics.add.sprite(100, 450, 'dude');
 	player.setBounce(0.2);
 	player.setCollideWorldBounds(true);
 
 	stars = this.physics.add.group({
-    key: 'star',
-    repeat: 20,
-    setXY: { x: 8, y: 0, stepX: 41 }
-	});
+    		key: 'star',
+    		repeat: 20,
+    		setXY: { 
+			x: 8, 
+			y: 0, 
+			stepX: 41 }
+		});
 	stars.children.iterate(function (child) {
-  child.setBounceY(Phaser.Math.FloatBetween(0.4, 0.8));
-});
+  		child.setBounceY(Phaser.Math.FloatBetween(0.4, 0.8));
+	});
 
 	/*
 	function Animations() {
 		this.anims.create({
-    	key: 'left',
-    	frames: this.anims.generateFrameNumbers('dude', { start: 0, end: 3 }),
-    	frameRate: 10,
-    	repeat: -1
+    			key: 'left',
+    			frames: this.anims.generateFrameNumbers('dude', { start: 0, end: 3 }),
+    			frameRate: 10,
+    			repeat: -1
 		});
-
 		this.anims.create({
-    	key: 'turn',
-    	frames: [ { key: 'dude', frame: 4 } ],
-    	frameRate: 20
+    			key: 'turn',
+    			frames: [ { key: 'dude', frame: 4 } ],
+    			frameRate: 20
 		});
-
 		this.anims.create({
-    	key: 'right',
-    	frames: this.anims.generateFrameNumbers('dude', { start: 5, end: 8 }),
-    	frameRate: 10,
-    	repeat: -1
+    			key: 'right',
+    			frames: this.anims.generateFrameNumbers('dude', { start: 5, end: 8 }),
+    			frameRate: 10,
+    			repeat: -1
 		});
 	}
 	*/
@@ -95,46 +115,49 @@ function create (){
 	this.physics.add.collider(stars, platforms);
 	cursors = this.input.keyboard.createCursorKeys();
 	this.physics.add.overlap(player, stars, collectStar, null, this);
-
 	scoreText = this.add.text(16, 16, 'score: 0', { fontSize: '32px', fill: '#ffffff' });
+	gameoverText = this.add.text(80, 300, 'GAME OVER', {fontSize:"120px", fill:"#ffffff"});
+	gameoverText.visible=false;
 }
 
-function collectStar (player, star)
-{
-    star.disableBody(true, true);
-
-    score += 10;
-    scoreText.setText('Score: ' + score);
+function collectStar (player, star){
+    	star.disableBody(true, true);
+    	score += 10;
+    	scoreText.setText('Score: ' + score);
+	getStar.play();
 }
-
 function update (){
-	if (cursors.left.isDown)
-	{
-	    player.setVelocityX(-160);
-
-	    player.anims.play('left', true);
+	if (cursors.left.isDown){
+	    	player.setVelocityX(-160);
+	    	player.anims.play('left', true);
 	}
-	else if (cursors.right.isDown)
-	{
-	    player.setVelocityX(160);
-
-	    player.anims.play('right', true);
+	else if (cursors.right.isDown){
+		player.setVelocityX(160);
+		player.anims.play('right', true);
 	}
-	else
-	{
-	    player.setVelocityX(0);
-
-	    player.anims.play('turn');
+	else{
+	    	player.setVelocityX(0);
+	    	player.anims.play('turn');
 	}
-
-	if (cursors.up.isDown && player.body.touching.down)
-	{
-	    player.setVelocityY(-330);
+	if (cursors.up.isDown && player.body.touching.down){
+	    	player.setVelocityY(-330);
 	}
-
-
+	if(score >= 200){
+		gameoverText.visible=true;
+		gameOver.play();
+		return;
+	}
 }
 </script>
+	</div>
+	
+	
+
+	<a href="index.html"><h3>RESET</h3></a>
+	<a href="../index.html"><h3>GO BACK</h3></a>
+	
 </center>
+</body>
+<body>
 </body>
 </html>
